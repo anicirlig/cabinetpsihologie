@@ -4718,24 +4718,6 @@ input, select, textarea {
 		}
 
 	}
-/* ===== FIX MOBILE INTRO + BACKGROUND ===== */
-@media screen and (max-width: 736px) {
-
-	#wrapper > .bg {
-		background-image:
-			linear-gradient(0deg, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.10)),
-			url("../../images/bg.png");
-		background-size:
-			cover,
-			auto 100%;
-		background-position:
-			center,
-			left 42% top;
-		background-repeat:
-			no-repeat,
-			no-repeat;
-	}
-
 	#intro {
 		padding: 6rem 1.5rem 3rem 1.5rem;
 		min-height: 72vh;
@@ -4790,41 +4772,6 @@ input, select, textarea {
 	#intro p {
 		font-size: 0.95rem;
 		line-height: 1.8;
-		max-width: 18rem;
-	}
-
-	#intro .button.icon.solo {
-		width: 3.5rem;
-		height: 3.5rem;
-		line-height: 3.5rem;
-	}
-}
-@media screen and (max-width: 480px) {
-
-	#wrapper > .bg {
-		background-position:
-			center,
-			center,
-			left 36% top;
-		background-size:
-			auto,
-			auto,
-			auto 100%;
-	}
-
-	#intro {
-		padding: 5rem 1.25rem 2.25rem 1.25rem;
-		min-height: 68vh;
-	}
-
-	#intro h1 {
-		font-size: 2.45rem;
-		line-height: 1.05;
-	}
-
-	#intro p {
-		font-size: 0.95rem;
-		line-height: 1.75;
 		max-width: 18rem;
 	}
 
