@@ -3228,19 +3228,34 @@ input, select, textarea {
 	}
 
 		#wrapper > .bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #212931;
-			background-image: url("../../images/bg.png");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: no-repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
-			z-index: -1;
-		}
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #212931;
+	background-image:
+		url("../../images/overlay.png"),
+		linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08)),
+		url("../../images/bg.png");
+	background-size:
+		auto,
+		auto,
+		cover;
+	background-position:
+		center,
+		center,
+		left 30% top 18%;
+	background-repeat:
+		repeat,
+		no-repeat,
+		no-repeat;
+	background-attachment:
+		scroll,
+		scroll,
+		scroll;
+	z-index: -1;
+}
 
 			#wrapper > .bg.fixed {
 				position: fixed;
@@ -3275,11 +3290,18 @@ input, select, textarea {
 
 		@media screen and (orientation: portrait) {
 
-			#wrapper > .bg {
-				background-size: auto,								auto,														auto 175%;
-			}
+	#wrapper > .bg {
+		background-size:
+			auto,
+			auto,
+			auto 100%;
+		background-position:
+			center,
+			center,
+			left 38% top;
+	}
 
-		}
+}
 
 /* Intro */
 
@@ -3469,27 +3491,35 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
-			#intro {
-				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
-			}
+	#intro {
+		padding: 5.5rem 1.5rem 2.5rem 1.5rem;
+		min-height: 72vh;
+		justify-content: flex-end;
+	}
 
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
+	#intro h1 {
+		font-size: 2.9rem;
+		line-height: 1.05;
+		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+	}
 
-				#intro p {
-					font-size: 1rem;
-					margin-top: 0rem;
-				}
+	#intro p {
+		font-size: 1rem;
+		line-height: 1.8;
+		margin-top: 0;
+		max-width: 20rem;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
 
-				#intro .actions {
-					display: none;
-				}
-
-		}
+	#intro .actions {
+		display: flex !important;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+}
 
 /* Header */
 
@@ -4769,67 +4799,38 @@ input, select, textarea {
 		line-height: 3.5rem;
 	}
 }
-/* imagine mobil ascunsă pe desktop */
-.intro-mobile-image {
-	display: none;
-}
+@media screen and (max-width: 480px) {
 
-@media screen and (max-width: 736px) {
-
-	/* oprim fundalul mare pe mobil */
 	#wrapper > .bg {
-		background-image: none !important;
-		background-color: #b9925f;
+		background-position:
+			center,
+			center,
+			left 36% top;
+		background-size:
+			auto,
+			auto,
+			auto 100%;
 	}
 
 	#intro {
-		background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.18));
-		padding: 2.5rem 1.25rem 2rem 1.25rem;
-		min-height: auto;
-	}
-
-	.intro-mobile-image {
-		display: block;
-		width: 100%;
-		max-width: 26rem;
-		margin: 0 auto 2rem auto;
-		border: 0;
+		padding: 5rem 1.25rem 2.25rem 1.25rem;
+		min-height: 68vh;
 	}
 
 	#intro h1 {
-		font-size: 2.7rem;
+		font-size: 2.45rem;
 		line-height: 1.05;
-		margin-bottom: 1rem;
-		letter-spacing: 0.05em;
-	}
-
-	#intro p {
-		font-size: 1rem;
-		line-height: 1.8;
-		margin: 0 auto 1.5rem auto;
-		max-width: 19rem;
-		text-align: center;
-	}
-
-	#intro .actions {
-		display: flex !important;
-		justify-content: center;
-		margin-top: 0.5rem;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	#intro h1 {
-		font-size: 2.35rem;
 	}
 
 	#intro p {
 		font-size: 0.95rem;
-		max-width: 17.5rem;
+		line-height: 1.75;
+		max-width: 18rem;
 	}
 
-	.intro-mobile-image {
-		max-width: 100%;
-		margin-bottom: 1.5rem;
+	#intro .button.icon.solo {
+		width: 3.5rem;
+		height: 3.5rem;
+		line-height: 3.5rem;
 	}
 }
