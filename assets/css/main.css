@@ -4847,15 +4847,3 @@ input, select, textarea {
 	}
 }
 /* ===== TITLU + DESCRIERE + MENIU - varianta calda, eleganta ===== */
-
-#intro h1 {
-	color: #212931;
-}
-
-#intro p {
-	color: #212931;
-}
-
-#nav ul.links li a {
-	color: #212931 !important;
-}
