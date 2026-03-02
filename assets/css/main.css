@@ -4849,37 +4849,13 @@ input, select, textarea {
 /* ===== TITLU + DESCRIERE + MENIU - varianta calda, eleganta ===== */
 
 #intro h1 {
-	color: #F7F1E8;
-	text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
+	color: #212931;
 }
 
 #intro p {
-	color: #EFE3CF;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
-}
-
-#nav {
-	background: rgba(186, 160, 126, 0.20);
-	backdrop-filter: blur(3px);
+	color: #212931;
 }
 
 #nav ul.links li a {
-	color: #F3E7D3;
-}
-
-#nav ul.links li a:hover {
-	color: #D8B26A !important;
-	background-color: rgba(255, 255, 255, 0.08);
-}
-
-#nav ul.links li.active {
-	background-color: rgba(247, 241, 232, 0.88);
-}
-
-#nav ul.links li.active a {
-	color: #6B4E2E;
-}
-
-#nav ul.links li.active a:hover {
-	color: #8A6742 !important;
+	color: #212931 !important;
 }
