@@ -368,30 +368,38 @@
       <!-- Footer -->
       <footer id="footer">
         <section>
-          <form method="post" action="#">
-            <div class="fields">
-              <div class="field">
-                <label for="name">Nume</label>
-                <input type="text" name="name" id="name" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" />
-              </div>
-              <div class="field">
-                <label for="message">Mesaj</label>
-                <textarea name="message" id="message" rows="3"></textarea>
-              </div>
-            </div>
-              <p style="font-size:0.85em; margin: 1rem 0;">
+          <form id="contact-form">
+
+  <div class="fields">
+
+    <div class="field">
+      <label>Nume</label>
+      <input type="text" name="name" required />
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" required />
+    </div>
+
+    <div class="field">
+      <label>Mesaj</label>
+      <textarea name="message" rows="4" required></textarea>
+    </div>
+
+  </div>
+<p style="font-size:0.85em; margin: 1rem 0;">
     Prin trimiterea mesajului confirmați acordul privind
     prelucrarea datelor personale în scopul contactării.
   </p>
-            <ul class="actions">
-              <li><input type="submit" value="Trimite mesaj" /></li>
-            </ul>
-          </form>
-        </section>
+  <ul class="actions">
+    <li><input type="submit" value="Trimite mesaj" /></li>
+  </ul>
+
+</form>
+
+<p id="status-message"></p>
+            
 
         <section class="split contact">
           <section class="alt">
