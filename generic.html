@@ -130,6 +130,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+  (function(){
+      emailjs.init("LJQCvghHuD6C5jTlw");
+  })();
+
+  document.getElementById("contact-form")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_i8p2igb", "template_25gfeq5", this)
+      .then(function() {
+        document.getElementById("status-message").innerHTML =
+          "Mesaj trimis cu succes!";
+      }, function(error) {
+        document.getElementById("status-message").innerHTML =
+          "Eroare la trimitere. Încercați din nou.";
+      });
+  });
+</script>
 	</body>
 </html>
