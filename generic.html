@@ -55,50 +55,65 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Nume</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Mesaj</label>
-										<textarea name="message" id="Message" rows="3"></textarea>
-									</div>
-								</div>
-								  <p style="font-size:0.85em; margin: 1rem 0;">
-    Prin trimiterea mesajului confirmați acordul privind
-    prelucrarea datelor personale în scopul contactării.
-  </p>
-								<ul class="actions">
-									<li><input type="submit" value="Trimite mesaj" /></li>
-								</ul>
-							</form>
-						</section>
-					
-						<section class="split contact">
-							<section class="alt">
-								<h3>Addresa</h3>
-								<p>Strada Calea Severinului<br />
-								Nr.31, Târgu Jiu, Gorj</p>
-							</section>
-							<section>
-								<h3>Număr de telefon</h3>
-								<p><a href="#">0786 199 101</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">manuela.cirligm@gmail.com</a></p>
-							</section>
-						
-						</section>
-					</footer>
+<footer id="footer">
+
+  <!-- STÂNGA - Formular -->
+  <section>
+    <h3>Trimite un mesaj</h3>
+
+    <form id="contact-form">
+
+      <div class="field">
+        <label>Nume</label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="field">
+        <label>Mesaj</label>
+        <textarea name="message" rows="4" required></textarea>
+      </div>
+
+      <p style="font-size:0.85em; margin: 1rem 0;">
+        Prin trimiterea mesajului confirmați acordul privind
+        prelucrarea datelor personale în scopul contactării.
+      </p>
+
+      <ul class="actions">
+        <li><input type="submit" value="Trimite mesaj" /></li>
+      </ul>
+
+    </form>
+
+    <div id="status-message" style="margin-top:1rem;"></div>
+
+  </section>
+
+  <!-- DREAPTA - Contact -->
+  <section class="split contact">
+
+    <section class="alt">
+      <h3>Adresa</h3>
+      <p>Strada Calea Severinului, nr. 31<br />Târgu Jiu, Gorj</p>
+    </section>
+
+    <section>
+      <h3>Telefon</h3>
+      <p><a href="tel:+40786199101">0786 199 101</a></p>
+    </section>
+
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:manuela.cirligm@gmail.com">manuela.cirligm@gmail.com</a></p>
+    </section>
+
+  </section>
+
+</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
