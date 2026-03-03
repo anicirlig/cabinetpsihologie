@@ -366,7 +366,6 @@
       </div>
 
       <!-- Footer -->
-      <!-- Footer -->
 <footer id="footer">
 
   <!-- STÂNGA - Formular -->
@@ -439,14 +438,14 @@
 
 <script>
   (function(){
-      emailjs.init("PUBLIC_KEY_LJQCvghHuD6C5jTlw");
+      emailjs.init("LJQCvghHuD6C5jTlw");
   })();
 
   document.getElementById("contact-form")
   .addEventListener("submit", function(event) {
     event.preventDefault();
 
-    emailjs.sendForm("SERVICE_ID_service_i8p2igb", "TEMPLATE_ID_template_25gfeq5", this)
+    emailjs.sendForm("service_i8p2igb", "template_25gfeq5", this)
       .then(function() {
         document.getElementById("status-message").innerHTML =
           "Mesaj trimis cu succes!";
