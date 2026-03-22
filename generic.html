@@ -14,6 +14,14 @@
 	</head>
 	<body class="is-preload">
 
+		   <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li class="active"><a href="index.html">SERVICII</a></li>
+          <li><a href="generic.html">PREZENTARE</a></li>
+          <li><a href="#psihopedagogie" class="scrolly">PSIHOPEDAGOGIE</a></li>
+        </ul>
+      </nav>
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -47,45 +55,65 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Addresa</h3>
-								<p>Strada Calea Severinului<br />
-								Nr.31, Târgu Jiu, Gorj</p>
-							</section>
-							<section>
-								<h3>Număr de telefon</h3>
-								<p><a href="#">0786 199 101</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">manuela.cirligm@gmail.com</a></p>
-							</section>
-						
-						</section>
-					</footer>
+<footer id="footer">
+
+  <!-- STÂNGA - Formular -->
+  <section>
+    <h3>Trimite un mesaj</h3>
+
+    <form id="contact-form">
+
+      <div class="field">
+        <label>Nume</label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="field">
+        <label>Mesaj</label>
+        <textarea name="message" rows="4" required></textarea>
+      </div>
+
+      <p style="font-size:0.85em; margin: 1rem 0;">
+        Prin trimiterea mesajului confirmați acordul privind
+        prelucrarea datelor personale în scopul contactării.
+      </p>
+
+      <ul class="actions">
+        <li><input type="submit" value="Trimite mesaj" /></li>
+      </ul>
+
+    </form>
+
+    <div id="status-message" style="margin-top:1rem;"></div>
+
+  </section>
+
+  <!-- DREAPTA - Contact -->
+  <section class="split contact">
+
+    <section class="alt">
+      <h3>Adresa</h3>
+      <p>Strada Calea Severinului, nr. 31<br />Târgu Jiu, Gorj</p>
+    </section>
+
+    <section>
+      <h3>Telefon</h3>
+      <p><a href="tel:+40786199101">0786 199 101</a></p>
+    </section>
+
+    <section>
+      <h3>Email</h3>
+      <p><a href="mailto:manuela.cirligm@gmail.com">manuela.cirligm@gmail.com</a></p>
+    </section>
+
+  </section>
+
+</footer>
 
 				<!-- Copyright -->
 					<div id="copyright">
@@ -102,6 +130,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+  (function(){
+      emailjs.init("LJQCvghHuD6C5jTlw");
+  })();
+
+  document.getElementById("contact-form")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_i8p2igb", "template_25gfeq5", this)
+      .then(function() {
+        document.getElementById("status-message").innerHTML =
+          "Mesaj trimis cu succes!";
+      }, function(error) {
+        document.getElementById("status-message").innerHTML =
+          "Eroare la trimitere. Încercați din nou.";
+      });
+  });
+</script>
 	</body>
 </html>
