@@ -4847,3 +4847,19 @@ input, select, textarea {
 	}
 }
 /* ===== TITLU + DESCRIERE + MENIU - varianta calda, eleganta ===== */
+
+.cta-logopedie {
+  display: inline-block;
+  background: #1f3a5f;
+  color: #ffffff !important;
+  padding: 0.9rem 2.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.cta-logopedie:hover {
+  background: #152a45;
+  transform: translateY(-2px);
+}
