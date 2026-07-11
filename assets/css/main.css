@@ -4863,3 +4863,25 @@ input, select, textarea {
   background: #152a45;
   transform: translateY(-2px);
 }
+@media screen and (max-width: 736px) {
+  #main .post.featured header.major h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.03em !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+  #main .post.featured header.major p {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #main .post.featured header.major h1 {
+    font-size: 1.65rem !important;
+    letter-spacing: 0.02em !important;
+  }
+}
